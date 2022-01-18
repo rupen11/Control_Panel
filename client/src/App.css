@@ -1,0 +1,1245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --dark-blue: rgb(0, 0, 20);
+  --classiblack: rgb(15, 15, 15);
+  --white: #fff;
+  --dark-black-primary: rgb(25, 25, 29);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--dark-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+body {
+  background-color: var(--classiblack);
+  color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.myBtn {
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  display: block;
+}
+
+.btn-white {
+  color: var(--white);
+  background-color: transparent;
+  margin-left: 1px;
+}
+
+.btn-white:hover {
+  background-color: var(--dark-blue);
+}
+
+.line {
+  display: block;
+  width: 100%;
+}
+
+.hori-line-gray {
+  width: 40%;
+  display: inline-block;
+  height: 0.1px;
+  background-color: var(--white);
+  transition: 0.9s;
+}
+
+.hori-line-blue {
+  width: 20%;
+  display: inline-block;
+  height: 0.1px;
+  background-color: blue;
+  transition: 0.9s;
+}
+
+/*********************************** Header *******************************/
+.mymenubar h3 {
+  display: inline-block;
+}
+
+.mymenubar .maintext {
+  display: inline-block;
+  margin-left: 2%;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.mymenubar .maintext span {
+  font-weight: bold;
+}
+
+.mymenubar i {
+  font-weight: normal;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.mymenubar .menubar li {
+  padding: 0 0.7rem;
+}
+
+/********************************************* content *********************************************/
+#content {
+  position: relative;
+  height: 30rem;
+  text-transform: capitalize;
+}
+
+#content::before {
+  content: "";
+  background: url("./images/bg.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+#content::after {
+  content: "";
+  background: black;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+#content .content-primary {
+  padding: 5rem 0 0 3rem;
+}
+
+#content .content-primary h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+#content .content-primary span {
+  font-size: 1rem;
+  color: lightgray;
+}
+
+#content .content-primary .btnstart {
+  margin: 2rem 0 0 0;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  background-color: lightgray;
+  border: 2px solid lightgray;
+  border-radius: 5rem 0 5rem 0;
+  padding: 0.3rem 2rem;
+}
+
+#content .content-primary .btnstart a {
+  color: black;
+}
+
+#content .content-primary .btnstart:hover a {
+  color: white;
+}
+
+#content .content-primary .btnstart:hover {
+  background-color: transparent;
+}
+
+#content .content-primary .btnstart i {
+  padding-left: 1rem;
+}
+
+/*********************************** Info *******************************/
+#infosection {
+  padding: 5rem 0;
+}
+
+#infosection h1 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+#infosection .mainbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#infosection .mainbox .boxover {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 13px;
+  background-color: rgba(0, 0, 0, 0.26);
+  transition: 0.9s;
+}
+
+#infosection .mainbox .box {
+  position: relative;
+  width: 30rem;
+  border-radius: 13px;
+  box-shadow: 0 0 10px 0 black;
+  padding: 1rem;
+  margin: 1rem;
+  transition: 0.5s;
+  background-color: var(--classiblack);
+  cursor: pointer;
+}
+
+#infosection .mainbox .box:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  color: var(--white);
+}
+
+#infosection .mainbox .box:hover .boxover {
+  width: 100%;
+}
+
+#infosection .mainbox .box:hover .hori-line-gray {
+  width: 50%;
+}
+
+#infosection .mainbox .box:hover .hori-line-blue {
+  width: 30%;
+}
+
+#infosection .mainbox .box p {
+  margin: 1rem 0;
+  line-height: 1.7rem;
+}
+
+@media screen and (max-width: 500px) {
+  #content .content-primary {
+    padding: 5rem 0 0 1rem;
+  }
+  #content .content-primary h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  #content .content-primary span {
+    font-size: 0.9rem;
+  }
+  #infosection {
+    padding: 1rem 0;
+  }
+  #infosection .mainbox .box {
+    font-size: 0.8rem;
+  }
+}
+
+/*********************************** Control *******************************/
+#control {
+  max-width: 100%;
+  padding: 30px 0px;
+}
+
+#control .control-panel {
+  background-color: rgb(36, 156, 36);
+  display: inline-block;
+  border: 1px solid green;
+  border-radius: 7px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#control .control-panel:hover {
+  background-color: rgba(36, 156, 36, 0.74);
+}
+
+#control .control-panel i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#control .control-panel h4 {
+  display: inline-block;
+}
+
+#control .control-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#control .control-section #table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#control .my-custom-scrollbar {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+}
+
+#control .table-wrapper-scroll-y {
+  display: block;
+}
+
+#control .control-section #table th {
+  border: 1px solid rgb(63, 63, 63);
+  padding: 10px;
+  font-weight: 400;
+}
+
+#control .control-section #table tr {
+  color: lightgray;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#control .control-section #table td {
+  border: 1px solid rgb(63, 63, 63);
+  padding: 0.3rem 0;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.searchresult{
+  background-color: rgba(0, 0, 0, 0);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: absolute;
+  top: 0;
+  position: fixed;
+}
+
+.active {
+  display: block;
+  animation-name: zoom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes zoom{
+  from{
+    transform: scale(0); 
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+.searchresult .overly{
+  width: 50%;
+  margin: auto;
+  background-color: rgb(20, 20, 20);
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  position: relative;
+}
+
+.searchresult .overly h4{
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.searchresult .search-border{
+  width: 100%;
+  display: block;
+  height: 1.5px;
+  background-color: rgb(39, 39, 39);
+}
+
+.searchresult .close{
+  color: gray;
+  font-weight: 100;
+  font-size: 2.3rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.searchresult .productresult{
+  margin-top: 1rem;
+}
+
+.searchresult .productresult .resultbox{
+  text-transform: capitalize;
+  padding: 0.3rem 0;
+  color: rgb(168, 168, 168);
+}
+
+.searchresult .productresult .resultbox label{
+  margin: 0;
+  width: 30%;
+}
+
+@media screen and (max-width: 1200px) {
+  .searchresult .overly{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .searchresult .overly{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .searchresult .overly{
+    width: 90%;
+  }
+  .searchresult .productresult .resultbox label{
+    width: 50%;
+  }
+  .searchresult .productresult .resultbox{
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .searchresult .overly{
+    padding: 1rem 1rem;
+  }
+  .searchresult .productresult .resultbox label{
+    width: 50%;
+  }
+  .searchresult .productresult .resultbox{
+    font-size: 0.7rem;
+  }
+}
+
+/*********************************** Crud *******************************/
+#crud {
+  max-width: 100%;
+  padding: 30px 0px;
+}
+
+#crud .control-panel {
+  background-color: rgb(38, 36, 156);
+  display: inline-block;
+  border: 1px solid blue;
+  border-radius: 7px;
+  margin: 0px 0px 30px 30px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#crud .control-panel:hover {
+  background-color: rgba(38, 36, 156, 0.74);
+}
+
+#crud .control-panel i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#crud .control-panel h4 {
+  display: inline-block;
+}
+
+/*********************************** Crud / Update *******************************/
+#crud .insert,
+#crud .update {
+  background-color: var(--dark-black-primary);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid gray;
+  display: block;
+}
+
+#crud .insert h2,
+#crud .update h2 {
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#crud .insert #myInsertForm .myInput,
+#crud .update #myUpdateForm .myInput {
+  display: block;
+  margin-bottom: 13px;
+  border-radius: 7px;
+  border: 1px solid black;
+  outline: none;
+  padding: 5px 10px;
+  width: 100%;
+  transition: 0.5s;
+  background-color: rgb(201, 201, 201);
+}
+
+#crud .insert #myInsertForm #calculate,
+#crud .update #myUpdateForm #calculate {
+  display: block;
+  margin-bottom: 13px;
+  border-radius: 7px;
+  border: 1px solid black;
+  outline: none;
+  padding: 5px 10px;
+  width: 100%;
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+#crud .insert #myInsertForm .myInput:focus,
+#crud .update #myUpdateForm .myInput:focus {
+  box-shadow: 0px 0px 1px 3px lightblue;
+  border: 1px solid gray;
+}
+
+#crud .insert #myInsertForm label,
+#crud .update #myUpdateForm label {
+  font-size: 13px;
+  color: lightblue;
+  display: block;
+  margin-bottom: 3px;
+}
+
+#crud .insert #myInsertForm .btninsert,
+#crud .update #myUpdateForm .btnupdate{
+  padding: 5px 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(36, 156, 36);
+  color: var(--white);
+  cursor: pointer;
+  margin: 10px;
+  font-size: 17px;
+}
+
+#crud .insert #myInsertForm .btninsert:hover,
+#crud .update #myUpdateForm .btnupdate:hover {
+  background-color: rgba(36, 156, 36, 0.74);
+}
+
+/*********************************** Crud / Delete *******************************/
+#crud .delete {
+  background-color: var(--dark-black-primary);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid gray;
+  display: block;
+}
+
+#crud .delete h2 {
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#crud .delete #myDeleteForm .myInput {
+  display: block;
+  margin-bottom: 13px;
+  border-radius: 7px;
+  border: 1px solid black;
+  outline: none;
+  padding: 5px 10px;
+  width: 30%;
+  transition: 0.5s;
+  background-color: rgb(201, 201, 201);
+}
+
+#crud .delete #myDeleteForm .myInput:focus {
+  box-shadow: 0px 0px 1px 3px lightblue;
+  border: 1px solid gray;
+}
+
+#crud .delete #myDeleteForm label {
+  font-size: 13px;
+  color: lightblue;
+  display: block;
+  margin-bottom: 3px;
+}
+
+#crud .delete #myDeleteForm .btndelete {
+  padding: 5px 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(156, 36, 36);
+  color: var(--white);
+  cursor: pointer;
+  margin: 10px auto;
+  font-size: 17px;
+}
+
+#crud .delete #myDeleteForm .btndelete:hover {
+  background-color: rgba(156, 36, 36, 0.74);
+}
+
+/*********************************** Crud / Search *******************************/
+#crud .search {
+  background-color: var(--dark-black-primary);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid gray;
+  display: block;
+}
+
+#crud .search h2 {
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#crud .search #mySearchForm .myInput {
+  display: block;
+  margin-bottom: 13px;
+  border-radius: 7px;
+  border: 1px solid black;
+  outline: none;
+  padding: 5px 10px;
+  width: 30%;
+  transition: 0.5s;
+  background-color: rgb(201, 201, 201);
+}
+
+#crud .search #mySearchForm .myInput:focus {
+  box-shadow: 0px 0px 1px 3px lightblue;
+  border: 1px solid gray;
+}
+
+#crud .search #mySearchForm label {
+  font-size: 13px;
+  color: lightblue;
+  display: block;
+  margin-bottom: 3px;
+}
+
+#crud .search #mySearchForm .btnsearch {
+  padding: 5px 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(48, 36, 156);
+  color: var(--white);
+  cursor: pointer;
+  margin: 10px auto;
+  font-size: 17px;
+}
+
+#crud .search #mySearchForm .btnsearch:hover {
+  background-color: rgba(58, 36, 156, 0.74);
+}
+
+@media screen and (max-width: 500px) {
+  #control .control-section #table th {
+    font-size: 0.9rem;
+  }
+  #control .control-panel,
+  #crud .control-panel {
+    margin: 0px 0px 0px 20px;
+  }
+  #control .control-panel h4,
+  #crud .control-panel h4 {
+    font-size: 0.9rem;
+  }
+  #crud input {
+    height: 2rem;
+    width: 100%;
+  }
+  #crud .delete #myDeleteForm .myInput,
+  #crud .search #mySearchForm .myInput {
+    width: 100%;
+  }
+
+  #crud .insert #myInsertForm .btninsert,
+  #crud .update #myUpdateForm .btnupdate,
+  #crud .delete #myDeleteForm .btndelete,
+  #crud .search #mySearchForm .btnsearch {
+    padding: 0.5rem 2rem;
+    font-size: 15px;
+  }
+}
+
+/*********************************** About *******************************/
+#aboutsection {
+  display: flex;
+  flex-direction: column;
+}
+
+#aboutsection .about-title {
+  border-bottom: 1px solid gray;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#aboutsection .aboutbox {
+  border-radius: 1rem;
+  background-color: var(--dark-black-primary);
+  padding: 2rem;
+}
+
+#aboutsection .about-content {
+  padding-left: 0.3rem;
+  color: lightgray;
+  font-size: 0.9rem;
+}
+
+#aboutsection .myaccount a {
+  text-decoration: none;
+  color: lightgray;
+  padding: 0.3rem 0;
+  display: block;
+}
+
+#aboutsection .myaccount a:hover {
+  color: var(--white);
+}
+
+#aboutsection .myaccount table td {
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  #aboutsection .myaccount table td {
+    padding: 0.5rem 0 0 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/*********************************** Login *******************************/
+#signin {
+  max-width: 100%;
+  width: 30%;
+  margin: auto;
+  padding: 50px 0px;
+}
+
+#signin .control-signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#signin .control-signin h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  margin: 20px 0px;
+  color: lightgray;
+}
+
+#signin .control-signin h2 a {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: lightgray;
+}
+
+#signin .control-signin #myForm {
+  background-color: rgba(41, 41, 41, 0.507);
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+#signin .control-signin #myForm .myInput {
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: 1px solid black;
+  font-size: 13px;
+  outline: none;
+  transition: 1s;
+}
+
+#signin .control-signin #myForm .myInput:focus {
+  box-shadow: 0px 0px 1px 2px rgb(91, 91, 255);
+  border: 1px solid rgb(91, 91, 255);
+}
+
+#signin .control-signin #myForm label {
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+#signin .control-signin #myForm span {
+  color: rgb(163, 0, 0);
+  margin-left: 10px;
+}
+
+.btn-signin {
+  border: none;
+  color: var(--white);
+  background-color: transparent;
+  margin: 10px 0px;
+  background-color: #108327;
+  border-radius: 7px;
+  padding: 5px 10px;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-signin:hover {
+  background-color: #108327d5;
+}
+
+.btn-signin:active,
+.btn-signin:focus {
+  box-shadow: 0px 0px 1px 2px #0a5018;
+}
+
+#signin .control-signin .newSignup {
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 7px;
+  margin-top: 30px;
+  width: 100%;
+  padding: 20px 30px;
+}
+
+#signin .control-signin .newSignup p {
+  font-size: 13px;
+  color: gray;
+  text-align: center;
+}
+
+#signin .control-signin .newSignup p a {
+  color: rgb(73, 146, 255);
+  /* text-decoration: none; */
+  margin-left: 5px;
+}
+
+#signin .control-signin .newSignup p a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  #signin {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #signin {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #signin {
+    width: 60%;
+  }
+  #signin .control-signin h2 {
+    font-size: 1.3rem;
+  }
+  #signin .control-signin .newSignup p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #signin {
+    width: 90%;
+  }
+  .btn-signin {
+    font-size: 0.8rem;
+  }
+  #signin .control-signin #myForm label {
+    font-size: 10px;
+  }
+  #signin .control-signin #myForm .myInput {
+    margin-top: 0px;
+  }
+}
+
+/*********************************** Control *******************************/
+#signup {
+  max-width: 100%;
+  width: 40%;
+  margin: auto;
+  padding: 30px 0px 20px 0px;
+}
+
+#signup .control-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#signup .control-signup h5 {
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 1px;
+  color: gray;
+}
+
+#signup .control-signup h5 a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: gray;
+  margin-left: 10px;
+}
+
+#signup .control-signup h5 a span {
+  font-weight: bold;
+}
+
+#signup .control-signup h5 a i {
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+#signup .control-signup h3 {
+  font-weight: 300;
+  margin: 1rem 0;
+  color: lightgray;
+}
+
+#signup .control-signup #myForm {
+  background-color: rgba(41, 41, 41, 0.507);
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+#signup .control-signup #myForm .myInput {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: 1px solid black;
+  font-size: 13px;
+  outline: none;
+}
+
+#signup .control-signup #myForm .myInput:focus {
+  box-shadow: 0px 0px 1px 2px rgb(91, 91, 255);
+  border: 1px solid rgb(91, 91, 255);
+}
+
+#signup .control-signup #myForm label {
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: gray;
+  margin: 0;
+}
+
+#signup .control-signup #myForm span {
+  color: rgb(163, 0, 0);
+  margin-left: 10px;
+}
+
+.btn-signup {
+  border: none;
+  color: var(--white);
+  background-color: transparent;
+  margin: 10px 0px;
+  background-color: #108327;
+  border-radius: 7px;
+  padding: 5px 10px;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+#signup .control-signup .oldSignin {
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 7px;
+  margin-top: 30px;
+  width: 100%;
+  padding: 20px 30px;
+}
+
+#signup .control-signup .oldSignin p {
+  font-size: 13px;
+  color: gray;
+  text-align: center;
+}
+
+#signup .control-signup .oldSignin p a {
+  color: rgb(73, 146, 255);
+  /* text-decoration: none; */
+  margin-left: 5px;
+}
+
+#signup .control-signup .oldSignin p a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  #signup {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #signup .control-signup #myForm label {
+    font-size: 0.8rem;
+  }
+  #signup .control-signup h5 {
+    font-size: 1rem;
+  }
+  #signup .control-signup h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #signup {
+    width: 90%;
+  }
+  .btn-signup {
+    font-size: 0.8rem;
+  }
+}
+
+/*********************************** Error *******************************/
+#errorpage {
+  padding-top: 7rem;
+}
+
+#errorpage .error-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#errorpage .error-content .errorpage-404 h1 {
+  color: rgb(24, 24, 24);
+  font-weight: bold;
+  font-size: 20rem;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+#errorpage .error-content span {
+  color: rgb(131, 131, 131);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+#errorpage .error-content .error-text {
+  position: absolute;
+  z-index: 1;
+}
+
+#errorpage .error-content .error-text .btn-blue {
+  color: var(--white);
+  background-color: var(--dark-blue);
+  margin: 1rem auto;
+}
+
+#errorpage .error-content .error-text .btn-blue:hover {
+  background-color: transparent;
+}
+
+#errorpage .error-content .error-text .btn-blue a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+@media screen and (max-width: 900px) {
+  #errorpage .error-content .errorpage-404 h1 {
+    font-size: 15rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #errorpage {
+    padding-top: 13rem;
+  }
+  #errorpage .error-content .errorpage-404 h1 {
+    font-size: 10rem;
+  }
+}
+
+/*********************************** Contact *******************************/
+#contactsection .formsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 82vh;
+}
+
+#contactsection .formsection .innerform {
+  background-color: var(--dark-black-primary);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 13px 0 rgb(0, 0, 0);
+  width: 60%;
+}
+
+#contactsection .formsection .innerform h3 {
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+}
+
+#contactsection .formsection .innerform .myForm {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#contactsection .formsection .innerform .myForm .mycontactinput {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#contactsection .formsection .innerform .myForm .myInput {
+  padding: 0.6rem 0.5rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+  font-size: 0.9rem;
+  color: var(--white);
+  background-color: var(--classiblack);
+  width: 100%;
+}
+
+#contactsection .formsection .innerform .myForm .myInput:nth-child(2) {
+  margin: 0 1rem;
+}
+
+#contactsection .formsection .innerform .myForm .myTextarea {
+  width: 100%;
+  padding: 0.6rem 0.5rem;
+  margin-top: 2rem;
+  height: 7rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+  color: var(--white);
+  background-color: var(--classiblack);
+}
+
+#contactsection .formsection .innerform .myForm .btn-blue {
+  padding: 0.3rem 2rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  transition: 0.5s;
+}
+
+#contactsection .formsection .innerform .myForm .btn-blue:hover {
+  background-color: transparent;
+  color: var(--white);
+}
+
+@media screen and (max-width: 1000px) {
+  #contactsection .formsection .innerform {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #contactsection .formsection .innerform .myForm .mycontactinput {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #contactsection .formsection .innerform .myForm .myInput:nth-child(3),
+  #contactsection .formsection .innerform .myForm .myInput:nth-child(2) {
+    margin: 1rem 0 0 0;
+  }
+  #contactsection .formsection .innerform .myForm .myInput {
+    padding: 0.6rem 0.5rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+  #contactsection .formsection .innerform .myForm .myTextarea {
+    padding: 0.6rem 0.5rem;
+    margin-top: 1rem;
+    height: 7rem;
+    font-size: 0.8rem;
+  }
+  #contactsection .formsection .innerform .myForm .btn-blue {
+    margin-top: 1rem;
+  }
+}
+
+/*********************************** Footer *******************************/
+#footer {
+  background-color: rgba(0, 0, 0, 0.493);
+  padding: 1rem 0;
+}
+
+#footer .copyright {
+  color: rgb(100, 100, 100);
+  text-transform: capitalize;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+
+#footer .copyright span:hover {
+  font-weight: bold;
+  color: var(--dark-black-primary);
+}
+
+/*************************************************************************** Media ***************************************************************************/
